@@ -21,3 +21,24 @@ def print_even(a,b):
    
 print_even(1, 100)
 
+
+# Q3 Write a function that prints a digits of a number, n, one by one. For example, if n is 12345, the output should be: Digits: 1 Digits: 2 Digits: 3 Digits: 4 Digits: 5
+
+def print_number_digit(user_input):
+    tostr = str(user_input)
+    for digit in tostr:
+        print("Digits:", digit)
+
+print_number_digit(12345)
+
+
+# Q4 Write a function to return the count the number of digits in a number. For example, if the input is 12345, the output should be: Number of digits: 5
+
+def count_digits_in_number(number):
+    toStr  = str(number)
+    count =0
+    for digit in toStr:
+        count+=1
+    print(count)  
+
+
