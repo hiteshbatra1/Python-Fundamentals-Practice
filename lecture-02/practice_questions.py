@@ -42,3 +42,16 @@ def count_digits_in_number(number):
     print(count)  
 
 
+# Q5 Write the function to return the sum of digitsof a number, n. For example, if n is 12345, the output should be: Sum of digits: 15
+
+
+def print_sum_of_all_digit(number):
+    toStr = str(number)
+    totalValue = 0
+    for digit in toStr:
+        tonum= int(digit)
+        totalValue +=tonum
+    print(totalValue)
+
+print_sum_of_all_digit(1234567890)
+
