@@ -55,3 +55,12 @@ def print_sum_of_all_digit(number):
 
 print_sum_of_all_digit(1234567890)
 
+
+# Q6 Write a program to print all numbers from 1 to 100 that are divisible by both 3 and 5.
+
+def print_multiple_of_given_value(a,b):
+    for number in range(a, b+1):
+        if(number % 3 ==0 or number %5 ==0):
+            print(number)
+
+print_multiple_of_given_value(1,100)       
