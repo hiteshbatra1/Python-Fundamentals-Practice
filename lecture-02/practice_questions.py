@@ -64,3 +64,18 @@ def print_multiple_of_given_value(a,b):
             print(number)
 
 print_multiple_of_given_value(1,100)       
+
+
+# Q7 Design a program that continuously input a number 'n'  from user and print if it is positive or negative until user enters "Quit" to stop the program.
+
+
+user_input = input("Enter any number: ")
+while user_input != "Quit":
+    toNumber = int(user_input)
+    if (toNumber>=0):
+        print("Positive")
+    elif(toNumber<0):
+        print("Negative")
+    else:
+        print("put any valid number")  
+    user_input = input("Enter any number: ")  
