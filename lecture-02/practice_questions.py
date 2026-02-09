@@ -79,3 +79,26 @@ while user_input != "Quit":
     else:
         print("put any valid number")  
     user_input = input("Enter any number: ")  
+
+
+# Q8 Letʼs create a Simple that performs arithmetic operations. Create a function Calculator(a, b, operation) that performs addition, subtraction, multiplication, or division based on the operation parameter. [operation parameter can be '+', '-', '*', '/'].
+
+
+def Calculator(a , b , operation):
+    if(operation == '+'):
+        output = a+b
+        return output
+    elif(operation == '-'):
+        output = a-b
+        return output
+    elif(operation == "*"):
+        output = a*b
+        return  output  
+    elif(operation == '/'):
+        output = a/b
+        return output
+    else:
+        print("Please Provide Valid Operation")      
+
+output_value = Calculator(1,1,'+')
+print(output_value)    
