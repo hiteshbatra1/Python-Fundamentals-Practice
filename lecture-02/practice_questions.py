@@ -102,3 +102,21 @@ def Calculator(a , b , operation):
 
 output_value = Calculator(1,1,'+')
 print(output_value)    
+
+
+# Q9 Write a function is_prime(n) that returns True if n is a prime number and False otherwise, using a loop.
+
+def is_prime(number):
+    if(number<=1):
+        return False
+    if(number>=2):
+        count =0
+        for i in range(2, number):
+            if(number%i ==0):
+                count+=1
+            if(count==0):
+                return True
+            else:
+                return False       
+output = is_prime(101)
+print(output)
