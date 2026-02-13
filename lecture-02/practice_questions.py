@@ -120,3 +120,24 @@ def is_prime(number):
                 return False       
 output = is_prime(101)
 print(output)
+
+
+# Q10 Letʼs create a Number Guessing Game. Given a secret number (already decided by you), write a program that ask the user to guess it and prints :
+# • "Too high": if the guess is above the number
+# • "Too low": if the guess is below 
+# • "Correct!": if the guess matches 
+
+user_input = int(input("Enter Any Number: "))
+secret_number = 10
+while user_input != secret_number:
+    if(user_input<secret_number):
+        print("Too Low!")
+        user_input = int(input("Enter Any Number: "))
+    elif(user_input>secret_number):
+        print("Too High!")
+        user_input = int(input("Enter Any Number: "))
+    elif(user_input==secret_number):
+        print("Correct!")
+        break   
+
+
