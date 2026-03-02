@@ -18,3 +18,21 @@ for val in list_of_numbers:
 
 avg = sum/len(list_of_numbers)
 print(avg)  
+
+
+
+# Q3 Input two lists of integers from the user. Merge them in to one list and sort the result.
+
+user_input1 = list(input("Enter The Numbers: "))
+user_input2 = list(input("Enter The Numbers: "))
+print(user_input1)
+print(user_input2)
+sort_list = user_input1[:]
+
+for val in user_input2:
+    sort_list.append(val)
+
+print(sort_list)
+sort_list.sort()
+
+print(sort_list)
