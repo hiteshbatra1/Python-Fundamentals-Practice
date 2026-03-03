@@ -36,3 +36,29 @@ print(sort_list)
 sort_list.sort()
 
 print(sort_list)
+
+
+# Q4 Given a tuple of integers, create: 
+# A tuple of all even numbers 
+# A tuple of all odd numbers
+
+tup = (1,2,3,4,5,6,7,8,9,10)
+even_tup = []
+odd_tup =[]
+
+
+for val in tup:
+    if(val %2 ==0):
+        even_tup.append(val)
+    else:
+        odd_tup.append(val)
+
+
+even_tup1 = tuple(even_tup)
+odd_tup1 = tuple(odd_tup)
+
+print(tup)
+print(type(even_tup1))
+print(even_tup1)
+print(type(odd_tup1))
+print(odd_tup1)
