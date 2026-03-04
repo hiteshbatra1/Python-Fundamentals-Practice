@@ -62,3 +62,42 @@ print(type(even_tup1))
 print(even_tup1)
 print(type(odd_tup1))
 print(odd_tup1)
+
+
+# Q5 Create a dictionary where: 
+# Keys = student names 
+# Values = marks(integer) 
+# Write a menu-based program where user presses a key (ʼAʼ,‘Bʼ,‘Cʼ,‘Dʼ) depending on the operation they want toper form on the dictionary:
+# 1. A-Add a student
+# 2. B-Update marks 
+# 3. C-Search for a student 
+# 4. D-Display all students and marks
+
+user_input = input("Enter Any Operation: ")
+dict_info = {
+    "hitesh":70
+}
+
+if(user_input == "A"):
+    student_name = input("Enter The Name Of Student: ")
+    marks = int(input("Enter Marks Of Student: "))
+    dict_info.update({
+        student_name: marks
+    })
+    print("Added New Student In Dictionary")
+    print(dict_info)
+elif(user_input == "B"):
+    student_name = input("Enter The Name Of Student: ")
+    update_marks = int(input("Enter Marks You Want To Update: "))
+    dict_info[student_name]= update_marks
+    (print(f"Updated The Marks of {student_name}"))
+    print(dict_info)
+elif(user_input == "C"):
+    student_name = input("Enter Name Of The Student To Get Info: ") 
+    student_marks = dict_info.get(student_name)  
+    print(f"The Marks Of {student_name} is {student_marks}") 
+elif(user_input == "D"):
+    all_info = dict_info
+    print(all_info)
+else:
+    print("Please Provide A Valid Input")
