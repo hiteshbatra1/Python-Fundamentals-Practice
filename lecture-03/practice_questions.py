@@ -101,3 +101,16 @@ elif(user_input == "D"):
     print(all_info)
 else:
     print("Please Provide A Valid Input")
+
+
+# Q6 Given a list of words: Create a dictionary that maps each word to its length.
+
+list= ["apple", "banana","kiwi","cherry","mango"]
+dict = {}
+for val in list:
+    if(dict.get(val) == None):
+        dict.update({
+            val: len(val)
+        })
+   
+print(dict)
