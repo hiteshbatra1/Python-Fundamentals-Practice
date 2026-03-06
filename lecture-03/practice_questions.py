@@ -114,3 +114,13 @@ for val in list:
         })
    
 print(dict)
+
+
+# Q7 Write a program that takes a string from the user and prints the number of spaces in the string.
+
+user_input = input("Enter Any String: ")
+count = 0
+for val in user_input:
+    if(val ==" "):
+        count +=1
+print(f"The Spaces In The String Is {count}")
