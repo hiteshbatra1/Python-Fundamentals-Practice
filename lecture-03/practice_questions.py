@@ -124,3 +124,22 @@ for val in user_input:
     if(val ==" "):
         count +=1
 print(f"The Spaces In The String Is {count}")
+
+
+# Q8 Write a program to check whether two lists share no common elements.
+
+list_1 = [1,2,3,4,5]
+list_2 = [4,5,6,7,8,9,10]
+
+set_list1 = set(list_1)
+set_list2 = set(list_2)
+
+set_list_union = set_list1.union(set_list2)
+list1 = list(set_list_union)
+print(type(list1))
+print(list1)
+
+set_list_intersection = set_list1.intersection(set_list2)
+list2 = list(set_list_intersection)
+print(type(list2))
+print(list2)
