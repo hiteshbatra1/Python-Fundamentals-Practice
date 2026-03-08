@@ -143,3 +143,17 @@ set_list_intersection = set_list1.intersection(set_list2)
 list2 = list(set_list_intersection)
 print(type(list2))
 print(list2)
+
+
+# Q9 Given a list, print all elements that appear more than once in the list.
+
+list1 = [1,2,3,4,5,6,7,1,2]
+seen = set()
+duplicate = set()
+
+for val in list1:
+    if(val in seen):
+        duplicate.add(val)
+    else:
+        seen.add(val)
+print(duplicate)  
