@@ -157,3 +157,19 @@ for val in list1:
     else:
         seen.add(val)
 print(duplicate)  
+
+
+# Q10 Ask the user for a string and print :
+# • All unique characters 
+# • The count of unique characters
+
+user_input = input("Enter Anything: ")
+print(user_input)
+unique_values = set()
+for val in user_input:
+    if(val ==" "):
+        continue    
+    unique_values.add(val)
+      
+print(unique_values) 
+print(len(unique_values)) 
