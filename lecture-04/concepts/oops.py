@@ -47,3 +47,35 @@ class Student:
 stu1 = Student("Hitesh", 10)
 
 print(stu1.name,stu1.gpa, Student.college)
+
+
+# INSTANCE METHODS, CLASS METHODS, STATIC METHODS
+class Laptop:
+    storage_type = "SSD"
+
+    def __init__ (self,RAM,storage):
+        self.RAM = RAM
+        self.storage = storage
+
+    @classmethod
+    def get_storage_info(cls): #CLASS METHOD
+        print(f"The Laptop Storage Type is {cls.storage_type}")  
+
+    def get_info(self):  #INSTANCE METHOD
+        print(f"The Laptop has {self.RAM} RAM & {self.storage} {self.storage_type}") 
+
+    @staticmethod
+    def get_dicounted_price (price, discount): #STATIC METHOD
+        final_price = price - (discount * price / 100)
+        print(f"The Final Price of Laptop is {final_price}")
+           
+
+Laptop1 = Laptop("16gb","512gb")
+Laptop2 = Laptop("8gb", "256gb")
+
+Laptop1.get_info()
+Laptop2.get_info()
+Laptop1.get_storage_info()
+Laptop.get_storage_info()
+
+Laptop1.get_dicounted_price(50000, 10)
