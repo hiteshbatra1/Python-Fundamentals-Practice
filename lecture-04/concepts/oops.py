@@ -79,3 +79,36 @@ Laptop1.get_storage_info()
 Laptop.get_storage_info()
 
 Laptop1.get_dicounted_price(50000, 10)
+
+
+#PRACTICE PROBLEM
+class ProductStore:
+    store_name = "store"
+    count = 0
+    def __init__ (self,name,price):
+        self.name = name
+        self.price = price
+        ProductStore.count += 1
+
+    def get_productinfo (self):
+        info = f"Product Name: {self.name} And Price: {self.price}"
+        return info
+
+    @classmethod
+    def get_totalproducts (cls):
+        print(f"Total Products {cls.count}")    
+
+    @staticmethod
+    def get_discountedprice (price,discount):
+        final_price =   price - (discount * price/100)
+        print(f"The final Price is {final_price}")
+
+prod1 = ProductStore("Phone", 10000)
+
+info_product = prod1.get_productinfo()
+
+print(info_product)
+ProductStore.get_totalproducts()
+
+prod1.get_discountedprice(prod1.price, 10)
+
