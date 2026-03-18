@@ -112,3 +112,22 @@ ProductStore.get_totalproducts()
 
 prod1.get_discountedprice(prod1.price, 10)
 
+
+#ENCAPSULATION AND DATA HIDING
+class BankAccount:
+    def __init__ (self, name, balance):
+        self.name = name
+        # self.balance = balance  PUBLIC ATTRIBUTE
+        # self._balance = balance   PROTECTED ATTRIBUTE
+        self.__balance = balance    #PPRIVATE ATTRIBUTE
+
+    def get_balance (self):     #GETTER MEHTOD
+        return self.__balance  
+
+    def set_balance (self, newBalance): #SETTER METHOD
+        self.__balance = newBalance
+
+
+acc1 = BankAccount("Hitesh", "10m")
+acc1.set_balance("200m")
+print(acc1.name, acc1.get_balance())
