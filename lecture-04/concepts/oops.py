@@ -131,3 +131,71 @@ class BankAccount:
 acc1 = BankAccount("Hitesh", "10m")
 acc1.set_balance("200m")
 print(acc1.name, acc1.get_balance())
+
+
+# INHERITANCE
+
+# 1. SINGLE LEVEL INHERITANCE
+class Employee:
+    start_time = "10AM"
+    full_time = "6PM"
+
+    def change_fulltime (self, new_fulltime):
+        self.full_time = new_fulltime
+
+
+class Teacher(Employee):
+    def __init__ (self, subject):
+        self.subject = subject
+t1 = Teacher("English")
+print(t1.subject, t1.start_time, t1.full_time)
+
+
+
+class AdminStaff(Employee):
+    def __init__ (self, role):
+        self.role = role
+staff1 = AdminStaff("Manager")
+staff1.change_fulltime("7pm")
+print(staff1.role, staff1.start_time, staff1.full_time)
+
+
+# MULTI LEVEL INHERITANCE
+
+class Employee:
+    start_time = "10AM"
+    full_time = "6PM"
+
+class AdminStaff(Employee):
+    def __init__ (self,role):
+        self.role = role
+        
+class Accountant(AdminStaff):
+    def __init__(self, salary, role):
+        super().__init__(role)
+        self.salary = salary
+
+acc1 = Accountant(25000, "CA")
+print(acc1.salary, acc1.role, acc1.start_time, acc1.full_time)
+
+
+# MULTIPLE INHERITANCE
+
+class Teacher:
+    def __init__ (self, salary):
+        self.salary = salary
+
+class Student:
+    def __init__ (self, gpa):
+        self.gpa = gpa
+
+class TA(Teacher, Student):
+    def __init__ (self, salary, gpa, name):
+        super().__init__(salary)
+        Student.__init__(self, gpa)
+        self.name = name         
+
+
+ta1 = TA(25000, 10, "Hitesh")
+
+print(ta1.salary, ta1.gpa, ta1.name)
