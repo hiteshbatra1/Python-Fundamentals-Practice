@@ -218,3 +218,37 @@ class Lion(Animal):
 lion = Lion()
 
 lion.make_sound()
+
+
+#POLYMORHISM IN PYTHON
+
+#1. FUNCTION OVERIDING
+
+class Employee:
+    def get_designation (self):
+        print("Designation = Employee")
+
+class Teacher(Employee):
+    def get_designation (self):
+        print("Designation = Teacher")        
+
+t1 = Teacher()
+t1.get_designation()       
+
+# 2. DUCK TYPING
+
+class Teacher:
+    def get_designation(self):
+        print("Designation = Teacher")
+
+
+class StaffAdmin:
+    def get_designation(self):
+        print("Designation = StaffAdmin")
+
+
+t1 = Teacher()
+t1.get_designation()
+
+s1 = StaffAdmin()
+s1.get_designation()
