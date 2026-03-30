@@ -125,3 +125,35 @@ stu1.set_marks(100)
 stu1.get_name()
 stu1.get_roll_no()
 stu1.get_marks()
+
+
+#Q4 Create a class Shape with a Method Area. Concept of Method Overriding to calculate area of different shapes like Circle, Rectangle, and Triangle.
+
+#  Shape Class With Method Overriding
+class Shape:
+    def area (self):
+        print("The Area of Shape")
+
+# Subclass Circle Inheriting From Shape Class
+class Circle(Shape):
+    def area (self):
+        print("The Area of Circle")
+
+# Subclass Rectangle Inheriting From Shape Class
+class Rectangle(Shape):
+    def area (self):
+        print("The Area of Rectangle")
+# Subclass Triangle Inheriting From Shape Class
+class Triangle(Shape):
+    def area (self):
+        print("The Area of Triangle")    
+
+# Instances Of Each Subclass
+c1 = Circle()
+r1 = Rectangle()
+t1 = Triangle()
+
+# Calling Area Method Of Each Subclass
+c1.area()
+r1.area()
+t1.area()
