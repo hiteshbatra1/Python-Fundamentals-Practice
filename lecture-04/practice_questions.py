@@ -157,3 +157,33 @@ t1 = Triangle()
 c1.area()
 r1.area()
 t1.area()
+
+
+
+# Q5 Create a Base Class vehicle with attribute like brand and model. create two subclass car and bike that add extra attributes  seats in car and engine_capacity in bike.
+
+#  Vehicle Base Class And Car , Bike Subclasses
+class Vehicle:
+    def __init__ (self,brand,model):
+        self.brand = brand
+        self.model = model
+
+
+class Car(Vehicle):
+    def __init__ (self,brand,model,seats):
+        # Call The Constructor Of Vehicle Class
+        super().__init__(brand,model)
+        self.seats = seats
+
+class Bike(Vehicle):
+    def __init__ (self,brand, model, engine__cc):
+        # Call The Constructor Of Vehicle Class
+        super().__init__(brand, model)
+        self.engine__cc = engine__cc
+
+# Instances Of Car And Bike Classes
+c1 = Car("Suzuki",21,6)
+b1 = Bike("Hero",21, "100cc")
+# Printing Attributes Of Car And Bike Instances
+print(c1.brand,c1.model,c1.seats)
+print(b1.brand,b1.model,b1.engine__cc)
