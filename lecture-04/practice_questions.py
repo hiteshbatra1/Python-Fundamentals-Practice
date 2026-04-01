@@ -187,3 +187,45 @@ b1 = Bike("Hero",21, "100cc")
 # Printing Attributes Of Car And Bike Instances
 print(c1.brand,c1.model,c1.seats)
 print(b1.brand,b1.model,b1.engine__cc)
+
+
+#Q6 Create an abstract classEmployee with abstract method calculate_salary. Implement subclasses Intern, FullTimeEmployee and PartTimeEmployee that provide their own implementation of calculate_salary.
+
+# Abstract Class Employee And Its Subclasses
+from abc import ABC,abstractmethod
+
+class Employee(ABC):
+    @abstractmethod
+    def calculate_salary(self,salary):
+        pass
+
+class Intern(Employee):
+    def __init__ (self,salary):
+        self.salary = salary
+    def calculate_salary(self,salary):
+        print("Calculating Salary of Intern...")
+        print(f"Salary of Intern is {self.salary}")
+
+class FullTimeEmployee:
+    def __init__ (self, salary):
+        self.salary = salary
+    def calculate_salary(self,salary):
+        print("Calculating Salary of Full Time Employee...")
+        print(f"Salary of Full Time Employee is {self.salary}")
+
+class PartTimeEmployee:
+    def __init__ (self, salary):
+        self.salary = salary
+    def calculate_salary(self,salary):
+        print("Calculating Salary of Part Time Employee...")
+        print(f"Salary of Part Time Employee is {self.salary}")       
+
+# Instances Of Each Subclass
+I1 = Intern(10000)
+FT1 = FullTimeEmployee(100000)
+PT1 = PartTimeEmployee(50000)
+# Calling calculate_salary Method Of Each Subclass
+I1.calculate_salary(I1.salary)
+FT1.calculate_salary(FT1.salary)
+PT1.calculate_salary(PT1.salary)
+
