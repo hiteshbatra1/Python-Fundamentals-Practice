@@ -229,3 +229,19 @@ I1.calculate_salary(I1.salary)
 FT1.calculate_salary(FT1.salary)
 PT1.calculate_salary(PT1.salary)
 
+
+#Q7 Create a class Person that allows a constructor to work with name, name+age ,name+age+address.
+
+#  Person Class With Constructor Overloading
+class Person:
+    def __init__ (self, name=None, age=None, address=None):
+        self.name = name
+        self.age = age
+        self.address = address
+
+# Instances Of Person Class With Different Parameters
+p1 = Person("Hitesh")
+p2 = Person("Hitesh", 26, "India")
+# Printing Attributes Of Each Instance
+print(p1.name,p1.age,p1.address)
+print(p2.name,p2.age,p2.address)
