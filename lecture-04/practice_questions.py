@@ -245,3 +245,25 @@ p2 = Person("Hitesh", 26, "India")
 # Printing Attributes Of Each Instance
 print(p1.name,p1.age,p1.address)
 print(p2.name,p2.age,p2.address)
+
+
+#Q8 Create a class Player with a class variable player_count to keep track of the number of players created. Each time a new player is instantiated, increment this count. and instance variables name and level.
+
+#  Player Class With Class Variable To Track Number Of Players
+class Player:
+    player_count = 0
+
+    def __init__ (self,name , level):
+        self.name = name 
+        self.level = level
+        Player.player_count +=1
+    # Class Method To Get Total Number Of Players
+    @classmethod
+    def get_totalPlayers(cls):
+        print(f"Total Number of Players are {cls.player_count}")
+
+# Instances Of Player Class
+p1 = Player("P1", "Top")
+p2 = Player("P2","Top")
+# Getting Total Number Of Players
+Player.get_totalPlayers()
