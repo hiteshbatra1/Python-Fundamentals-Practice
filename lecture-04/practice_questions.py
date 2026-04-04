@@ -267,3 +267,32 @@ p1 = Player("P1", "Top")
 p2 = Player("P2","Top")
 # Getting Total Number Of Players
 Player.get_totalPlayers()
+
+
+#Q9 Create the following classes: Herbivore, Carnivore, Omnivore with some attributes and mehtods and then create a Bear class that inherits from all three classes.
+
+# Multiple Inheritance Example With Herbivore, Carnivore, Omnivore And Bear Classes
+class Herbivore:
+    def __init__ (self, herbivore):
+        self.herbivore = herbivore
+
+class Carnivore:
+    def __init__ (self, carnivore):
+        self.carnivore = carnivore
+
+class Omnivore:
+    def __init__ (self, omnivore):
+        self.omnivore = omnivore
+
+# Bear Class Inheriting From Herbivore, Carnivore And Omnivore Classes
+class Bear(Herbivore,Carnivore,Omnivore):
+    def __init__ (self,herbivore,carnivore,omnivore,bear):
+        super().__init__(herbivore)   
+        Carnivore.__init__(self,carnivore) 
+        Omnivore.__init__(self,omnivore)
+        self.bear = bear
+
+# Instance Of Bear Class
+bear1 = Bear("herbivore","carnivore","omnivore","bear")   
+# Printing Attributes Of Bear Instance
+print(bear1.herbivore,bear1.carnivore,bear1.omnivore,bear1.bear)
