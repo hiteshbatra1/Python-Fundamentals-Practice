@@ -296,3 +296,90 @@ class Bear(Herbivore,Carnivore,Omnivore):
 bear1 = Bear("herbivore","carnivore","omnivore","bear")   
 # Printing Attributes Of Bear Instance
 print(bear1.herbivore,bear1.carnivore,bear1.omnivore,bear1.bear)
+
+
+#Q10 Mini Project OOP Chat System with User , Message, and ChatRoom classes.
+class Message:
+    message_counter = 1
+    def __init__ (self, sender, content):
+        self.sender = sender
+        self.content = content 
+        self.id = Message.message_counter
+        Message.message_counter += 1 
+
+    # String Representation Of Message Object
+    def __str__ (self):
+        return f"{self.id} {self.sender.username}: {self.content}"
+
+class User:
+    def __init__ (self, username):
+        self.username = username
+        self.chatroom = None
+    # Method To Join A Chatroom
+    def join_chatroom (self, chatroom):
+
+        if(self.chatroom == chatroom):
+            print(f"{self.username} is already in a chatroom")  
+        else:
+            chatroom.add_user(self)
+            self.chatroom = chatroom
+            print(f"{self.username} joined {self.chatroom}")
+    # Method To Leave A Chatroom
+    def leave_chatroom (self):
+
+        if not self.chatroom:
+            print(f"{self.username} not in any chatroom")
+        else:
+            self.chatroom.remove_user(self)
+            print(f"{self.username} left {self.chatroom.name}")   
+            self.chatroom = None
+    # Method To Send Message In Chatroom
+    def send_message (self,content):
+        if not self.chatroom:
+            print(f"{self.username} cannot send message (Not in chatroom).")   
+        else:
+            self.chatroom.broadcast(self,content)           
+
+
+class ChatRoom:
+    def __init__ (self, name):
+        self.name = name
+        self.users = []
+        self.messages = []
+    # Method To Add User To Chatroom
+    def add_user(self, user):
+        self.users.append(user)
+    # Method To Remove User From Chatroom
+    def remove_user (self, user):
+        self.users.remove(user)
+    # Method To Broadcast Message To All Users In Chatroom
+    def broadcast(self,sender,content):
+        message = Message(sender, content)        
+        self.messages.append(message)
+        print(message)
+    # Method To Show Chat History
+    def show_chat_history (self):
+        print(f"\n chat history of {self.name}:")
+        for msg in self.messages:
+            print(msg)    
+# Example Usage Of Chat System
+room = ChatRoom("Python Lounge")
+# Instances Of User Class
+u1 =User("Alice")
+u2 = User("Bob")
+u3 = User("Charlie")
+# Users Joining Chatroom
+u1.join_chatroom(room)
+u2.join_chatroom(room)
+# Users Sending Messages
+u1.send_message("Hello Everyone")
+u2.send_message("Hello All")
+# Another User Joining And Sending Message
+u3.join_chatroom(room)
+u3.send_message("Hello To All")
+# Show Chat History
+room.show_chat_history()
+# Users Leaving Chatroom
+u1.leave_chatroom()
+u2.leave_chatroom()
+u3.leave_chatroom()
