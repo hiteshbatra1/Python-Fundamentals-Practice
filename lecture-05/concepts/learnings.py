@@ -84,3 +84,89 @@ import os
 
 os.remove("sample2.txt")
 
+
+#Practice Problem:
+# Write A Program To Find How Many Times The Word "Python" Occurs In A File.
+data = True
+count = 1
+with open("sample.txt","r") as f:
+    while data:
+        data = f.readline()
+        print(data)
+        if("python" in data):
+            print(f"Found Python at line {count}")
+        count += 1
+
+
+Exception Handling:
+
+x = int(input("Enter Any Number: "))
+ans = 10/x
+print(ans)
+
+try:
+    x = int(input("Enter Any Number: "))
+    ans = 10/x
+except ZeroDivisionError:
+    print("Division Is Not Allowed with zero")
+except ValueError:
+    print("Please Provide Integers")    
+else:
+    print(ans)
+finally:
+    print("Python Program Executed")    
+
+
+# List Comprehensions:
+# [Output for item in iterable if condition]
+squares = []
+
+for i in range(6):
+    squares.append(i*i)
+
+print(squares)
+
+sq = [i*i for i in range(6) if i%2 !=0]
+print(sq)
+
+Num = [-2, -1, 0, 1, 2, 5]
+
+Num = [0 if val < 0 else val for val in Num]
+
+print(Num)
+
+abc = ["hello", "python", 'language']
+
+abc = [val.upper() for val in abc]
+print(abc)
+
+
+# Json Module:
+
+import json
+json_str ='{"name": "Hitesh","isEmployee": true}'
+py_obj = json.loads(json_str)
+print(type(py_obj),py_obj)
+
+
+import json
+py_obj = {
+    "name": "Hitesh",
+    "isEmployee": True
+}
+json_str = json.dumps(py_obj)
+print(type(json_str),json_str)
+
+import json
+with open("data.json", "r") as f:
+    py_obj = json.load(f)
+    print(py_obj)
+
+import json
+py_obj = {
+    "name":"Hitesh",
+    "isEmployee": True
+}
+
+with open("data.json", "w")as f:
+    json.dump(py_obj,f, indent =4 , sort_keys = True )
