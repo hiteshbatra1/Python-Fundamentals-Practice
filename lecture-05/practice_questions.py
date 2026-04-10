@@ -13,3 +13,13 @@ with open("names.txt","r") as f:
     while data:
         data = f.readline()
         print(data)
+
+
+#Q2 Opens a file in append mode "log.txt", and adds a new log entry (like "Program run successfully") then opens the file in read mode and prints all logs.   
+
+with open("log.txt","a") as f:
+    f.write("\nProgram run successfully")
+
+with open("log.txt","r") as f:
+    logs = f.read()
+    print(logs)
