@@ -31,3 +31,30 @@ num = [5, 10, 15, 20 ,25, 30]
 
 num1 = [i for i in num if i > 15]
 print(num1)
+
+
+
+
+#Q4 Create a Python dictionary of 3 cities and their populations. Save it to "cities.json". 1. Then load the JSON and print each city and its population. 2. Ask the user for a new city & its population - update this info in the json file
+import json
+city_info = {
+    "Delhi": "30m",
+    "Hyderbad": "10m",
+    "Banglore":"20"
+}
+
+with open("cities.json", "w") as f:
+    json.dump(city_info, f, indent = 4)
+
+with open("cities.json","r") as f:
+    data = json.load(f)
+    for city,population in data.items():
+        print(f"City:{city} Population:{population}")
+
+new_city = input("Enter City Name: ")
+new_population = input("Enter Population Size:")
+data[new_city] = new_population
+
+with open("cities.json", "w") as f:
+    json.dump(data,f,indent=4)
+    print(f"New city:{new_city} with Population of {new_population} added")
