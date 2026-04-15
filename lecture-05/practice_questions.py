@@ -58,3 +58,16 @@ data[new_city] = new_population
 with open("cities.json", "w") as f:
     json.dump(data,f,indent=4)
     print(f"New city:{new_city} with Population of {new_population} added")
+
+
+# Q5 Write a program that tries to open in read mode. If the file does not exist, catch the exception and print "File not found!"
+
+try:
+    with open("file.txt", "r") as f:
+        data = f.read()
+except:
+    print("File Not Found")
+else:
+    print(data)    
+
+
