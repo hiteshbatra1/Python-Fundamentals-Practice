@@ -1,4 +1,4 @@
-Sample.txt
+Sample.txt file
 This is the demo file
 to search for words 
 using File I/O
