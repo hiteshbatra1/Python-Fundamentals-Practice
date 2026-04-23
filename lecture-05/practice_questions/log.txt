@@ -2,6 +2,7 @@ some random log content
 some more random log content    
 Error: Timeout while fetching data
 Info: Retrying connection
+some more random log content
 Error: Unable to connect to database   
 Program run successfully
 Program run successfully
