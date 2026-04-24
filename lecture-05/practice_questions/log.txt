@@ -4,5 +4,6 @@ Error: Timeout while fetching data
 Info: Retrying connection
 some more random log content
 Error: Unable to connect to database   
+Error: Timeout while fetching data
 Program run successfully
 Program run successfully
