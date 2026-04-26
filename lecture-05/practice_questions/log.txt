@@ -7,5 +7,6 @@ some more random log content
 Error: Timeout while fetching data
 Error: Unable to connect to database   
 Error: Timeout while fetching data
+Error: Unable to connect to database
 Program run successfully
 Program run successfully
