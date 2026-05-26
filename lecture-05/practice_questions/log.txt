@@ -27,6 +27,7 @@ Error: Timeout while fetching data
 Error: Timeout while fetching data
 Error: Timeout while fetching data
 Error: Timeout while fetching data
+Error: Timeout while fetching data
 Info: Retrying connection
 Error: Timeout while fetching data
 Error: Timeout while fetching data
